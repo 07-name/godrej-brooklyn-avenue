@@ -1,0 +1,690 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godrej Brooklyn Avenue | Floor Plans & Specifications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --onyx: #0B0B0B;
+            --cashmere: #F4F1EC;
+            --brass: #C09A58;
+            --brass-light: #D4B483;
+            --platinum: #E5E4E2;
+            --muted: #8A8A8A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cashmere);
+            color: var(--onyx);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- Mini Header --- */
+        .mini-header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(11,11,11,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .mini-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mini-logo {
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .mini-logo img {
+                max-height: 40px;
+                width: auto;
+            }
+
+        .mini-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+            .mini-nav a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--onyx);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-brass {
+            background: var(--brass);
+            border-color: var(--brass);
+            color: #fff;
+        }
+
+            .btn-brass:hover {
+                background: transparent;
+                color: var(--brass);
+            }
+
+        .btn-outline-light {
+            border-color: #fff;
+            color: #fff;
+            background: transparent;
+        }
+
+            .btn-outline-light:hover {
+                background: #fff;
+                color: var(--onyx);
+            }
+
+        /* --- Hero Section --- */
+        .page-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--onyx);
+        }
+
+            .page-hero img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.4;
+                animation: kenburns 20s infinite alternate ease-in-out;
+            }
+
+        .page-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(11,11,11,0.8) 0%, rgba(11,11,11,0.4) 100%);
+            z-index: 2;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: #fff;
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            color: var(--brass-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        @keyframes kenburns {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(1.1) translate(-1%, -1%);
+            }
+        }
+
+        /* --- Section Base --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+            .section-header h2 {
+                font-size: 2.8rem;
+                margin-bottom: 10px;
+            }
+
+        .small-caps {
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--brass);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* --- Floor Plans Grid --- */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .plan-card {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 30px;
+            transition: box-shadow 0.3s;
+        }
+
+            .plan-card:hover {
+                box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            }
+
+        .plan-img-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border: 1px dashed #ccc;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .plan-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .plan-size {
+            color: var(--brass);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .plan-specs {
+            list-style: none;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+            .plan-specs li {
+                margin-bottom: 8px;
+                padding-left: 20px;
+                position: relative;
+            }
+
+                .plan-specs li::before {
+                    content: "•";
+                    color: var(--brass);
+                    position: absolute;
+                    left: 0;
+                    font-weight: bold;
+                }
+
+        /* --- Specifications Table --- */
+        .specs-section {
+            background: #fff;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+            .specs-table th, .specs-table td {
+                padding: 20px;
+                text-align: left;
+                border-bottom: 1px solid #eee;
+                font-size: 0.95rem;
+            }
+
+            .specs-table th {
+                background: var(--cashmere);
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                width: 30%;
+                color: var(--onyx);
+            }
+
+            .specs-table td {
+                color: #555;
+            }
+
+        /* --- Amenities Grid --- */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .amenity-tile {
+            position: relative;
+            height: 250px;
+            background: #222;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+            .amenity-tile:hover {
+                transform: scale(0.98);
+            }
+
+            .amenity-tile img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.4;
+                transition: opacity 0.3s;
+            }
+
+            .amenity-tile:hover img {
+                opacity: 0.6;
+            }
+
+        .amenity-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+            .amenity-content h4 {
+                font-size: 1.4rem;
+                margin-bottom: 5px;
+            }
+
+        .amenity-placeholder-text {
+            font-size: 0.8rem;
+            color: var(--brass-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Action Bar --- */
+        .action-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11,11,11,0.98);
+            backdrop-filter: blur(10px);
+            z-index: 998;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            padding: 10px 20px;
+            border-top: 1px solid #333;
+        }
+
+            .action-bar a {
+                flex: 1;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 12px;
+                border-right: 1px solid #333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+
+                .action-bar a:last-child {
+                    border-right: none;
+                }
+
+                .action-bar a:hover {
+                    color: var(--brass);
+                }
+
+            .action-bar svg {
+                width: 16px;
+                height: 16px;
+                fill: currentColor;
+            }
+
+        @media (max-width: 900px) {
+            .plans-grid, .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .specs-table th {
+                width: 100%;
+                display: block;
+            }
+
+            .specs-table td {
+                display: block;
+                border: none;
+            }
+        }
+    </style>
+    <!-- JSON-LD Schema for Floor Plans & Amenities -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ApartmentComplex",
+          "name": "Godrej Brooklyn Avenue",
+          "description": "Luxury 3 & 4 BHK Apartments in HITEC City, Hyderabad featuring a 75,000 sq.ft. clubhouse.",
+          "url": "https://www.godrejbrooklynavenue.estate/floor-plans.html",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "addressCountry": "IN"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "75,000 Sq.Ft. Clubhouse",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Olympic Infinity Pool",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Sky Lounge on 45th Floor",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Equinox-Style Gym",
+              "value": true
+            }
+          ],
+          "numberOfBedrooms": "3, 4"
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Mini Header -->
+    <header class="mini-header">
+        <div class="container mini-header-content">
+            <a href="index.html" class="mini-logo">
+                <img src="public/icons/logo1.webp" alt="Godrej Properties Logo">
+            </a>
+            <div class="mini-nav">
+                <a href="index.html">Home</a>
+                <a href="https://wa.me/919908622295" class="btn btn-outline-light">WhatsApp</a>
+                <a href="https://calendar.app.google/RZeHMy9JhTBH4zxP8" class="btn btn-brass" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: currentColor;"><path d="M17 12h-5v5h5v-5zM11 3H7v2h4V3zm-2 4H3v2h6V7zm-2 4H1v2h6v-2zm2 4H3v2h6v-2zm10-4h-2v5h2v-5zm4-2h-4v2h4V9zm0-4h-2v2h2V5zm0-2h-2v2h2V3z" /></svg>
+                    Book Viewing
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero" style="padding: 0;">
+        <!-- Replace this image with a video tag if you want a video here -->
+        <img src="public/images/Brooklynbridge.webp" alt="Brooklyn Bridge">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <span class="small-caps" style="color: var(--brass);">The Blueprint</span>
+            <h1>Floor Plans & Specifications</h1>
+            <p>Meticulously Designed for the Discerning Few</p>
+        </div>
+    </section>
+
+    <!-- Floor Plans Grid -->
+    <!-- Floor Plans Grid (1 Live, 3 Coming Soon) -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="small-caps">The Collection</span>
+                <h2>Typologies & Layouts</h2>
+            </div>
+            <div class="plans-grid">
+                <!-- Plan 1: MASTER PLAN (LIVE) -->
+                <div class="plan-card">
+                    <!-- Replace src with your actual master plan image -->
+                    <img src="public/images/master-plan.webp" alt="Godrej Brooklyn Avenue Master Floor Plan" style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 25px; border: 1px solid #eee;">
+                    <h3>3 BHK Classic</h3>
+                    <span class="plan-size">1,600 sq.ft. - Master Plan</span>
+                    <ul class="plan-specs">
+                        <li>3 Bedrooms with Attached Baths</li>
+                        <li>Spacious Living & Dining Area</li>
+                        <li>Modular Kitchen with Utility</li>
+                        <li>Master Suite with Walk-in Closet</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-brass" style="width: 100%;">Request Detailed Brochure</a>
+                </div>
+
+                <!-- Plan 2: COMING SOON -->
+                <div class="plan-card" style="opacity: 0.7; position: relative;">
+                    <div style="width: 100%; height: 300px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border: 1px dashed #ccc; color: var(--muted); flex-direction: column;">
+                        <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: currentColor; margin-bottom: 10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
+                        Coming Soon
+                    </div>
+                    <h3>3 BHK Premium</h3>
+                    <span class="plan-size">1,800 - 1,999 sq.ft.</span>
+                    <ul class="plan-specs">
+                        <li>3 Bedrooms with Attached Baths</li>
+                        <li>Enhanced Living & Dining Layout</li>
+                        <li>Private Deck / Balcony with Views</li>
+                        <li>Separate Dining & Utility Spaces</li>
+                    </ul>
+                    <button class="btn btn-outline-dark" style="width: 100%; cursor: not-allowed;" disabled>Notify Me When Ready</button>
+                </div>
+
+                <!-- Plan 3: COMING SOON -->
+                <div class="plan-card" style="opacity: 0.7; position: relative;">
+                    <div style="width: 100%; height: 300px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border: 1px dashed #ccc; color: var(--muted); flex-direction: column;">
+                        <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: currentColor; margin-bottom: 10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
+                        Coming Soon
+                    </div>
+                    <h3>3 BHK Skyline</h3>
+                    <span class="plan-size">2,000 - 2,400 sq.ft.</span>
+                    <ul class="plan-specs">
+                        <li>Ultra-Large Living Spaces</li>
+                        <li>3 Bedrooms + Servant's Quarters</li>
+                        <li>Panoramic 270° City Views</li>
+                        <li>Premium Smart Home Integration</li>
+                    </ul>
+                    <button class="btn btn-outline-dark" style="width: 100%; cursor: not-allowed;" disabled>Notify Me When Ready</button>
+                </div>
+
+                <!-- Plan 4: COMING SOON -->
+                <div class="plan-card" style="opacity: 0.7; position: relative;">
+                    <div style="width: 100%; height: 300px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border: 1px dashed #ccc; color: var(--muted); flex-direction: column;">
+                        <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: currentColor; margin-bottom: 10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
+                        Coming Soon
+                    </div>
+                    <h3>4 BHK Penthouse</h3>
+                    <span class="plan-size">3,200 sq.ft.</span>
+                    <ul class="plan-specs">
+                        <li>Double-Height Ceilings in Living Room</li>
+                        <li>4 Bedrooms + Servant's Quarters</li>
+                        <li>Private Terrace Garden / Pool Option</li>
+                        <li>Exclusive Penthouse Elevator Access</li>
+                    </ul>
+                    <button class="btn btn-outline-dark" style="width: 100%; cursor: not-allowed;" disabled>Notify Me When Ready</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specs-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="small-caps">Uncompromising Quality</span>
+                <h2>Project Specifications</h2>
+            </div>
+            <table class="specs-table">
+                <tr>
+                    <th>Structure & Foundation</th>
+                    <td>Earthquake-resistant RCC framed structure with deep foundation engineered for high-rise safety.</td>
+                </tr>
+                <tr>
+                    <th>Flooring</th>
+                    <td>Italian Marble in Living/Dining, Premium Engineered Laminate Wooden in Master Bedrooms, Double charged Vitrified Tiles in Kitchen & other Bedrooms, Anti-skid wood pattern vitrified tiles in Bathrooms/Balconies.</td>
+                </tr>
+                <tr>
+                    <th>Windows & Doors</th>
+                    <td>Main Door of Teak/Hardwood frame with both side veneer flush shutter, UPVC framed windows with Performance glass & provision for mosquito mesh. Main door: 2350 mm - Premium Teak Wood with hardware + smart lock.</td>
+                </tr>
+                <tr>
+                    <th>Kitchen</th>
+                    <td>LPG - space provision for gas bank, Water Purifier - provision given, Chimney Exhaust - provision given, Geysers in Toilets, kitchen sink - inlet and outlet provision.</td>
+                </tr>
+                <tr>
+                    <th>Bathrooms</th>
+                    <td>Master Toilet - Shower area with spout and shower of Grohe/equivalent make, European water closet with flush tank, anti-skid tiles, wash basin above counter of Grohe/equivalent make.</td>
+                </tr>
+                <tr>
+                    <th>Smart Home</th>
+                    <td>Pre-wired for smart home automation (lights, ACs, curtains), video door phone, and multi-point security surveillance.</td>
+                </tr>
+                <tr>
+                    <th>Electricals</th>
+                    <td>Adequate power with HT metering, AC point power provision only in Bedroom, Living/Dining room, modular switches & sockets (Schneider/Panasonic/Legrand), concealed copper wiring (Polycab/RR) </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- Amenities Gallery -->
+    <section style="background: var(--cashmere);">
+        <div class="container">
+            <div class="section-header">
+                <span class="small-caps">The Lifestyle</span>
+                <h2>75,000 Sq.Ft. Clubhouse & Amenities</h2>
+            </div>
+            <div class="amenities-grid">
+                <!-- Amenity 1: Clubhouse -->
+                <div class="amenity-tile">
+                    <img src="public/images/Clubhouse.webp" alt="Luxury Clubhouse">
+                    <div class="amenity-content">
+                        <h4>Grand Clubhouse</h4>
+                        <span class="amenity-placeholder-text">75,000 Sq.Ft.</span>
+                    </div>
+                </div>
+                <!-- Amenity 2: Pool -->
+                <div class="amenity-tile">
+                    <img src="public/images/terrace.webp" alt="Terrace Gardens">
+                    <div class="amenity-content">
+                        <h4>Terrace Gardens</h4>
+                        <span class="amenity-placeholder-text">Skyline Views</span>
+                    </div>
+                </div>
+                <!-- Amenity 3: Gym -->
+                <div class="amenity-tile">
+                    <img src="public/images/gym-yoga.webp" alt="Equinox Style Gym">
+                    <div class="amenity-content">
+                        <h4>Gym cum Yoga</h4>
+                        <span class="amenity-placeholder-text">Cardio & Strength</span>
+                    </div>
+                </div>
+                <!-- Amenity 4: Lounge -->
+                <div class="amenity-tile">
+                    <img src="public/images/salon.webp" alt="Saloon">
+                    <div class="amenity-content">
+                        <h4>Salon</h4>
+                        <span class="amenity-placeholder-text">Salon & Spa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Action Bar -->
+    <div class="action-bar">
+        <a href="booking.html">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+            Call Request
+        </a>
+        <a href="https://wa.me/919908622295">
+            <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.21-.57-.36z" /><path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.41 1.27 4.85L2 22l5.25-1.38C8.66 21.43 10.28 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.5c-1.52 0-2.96-.4-4.21-1.1l-.3-.18-3.12.82.83-3.04-.2-.31C3.31 15.47 3 13.77 3 12c0-4.96 4.04-9 9-9s9 4.04 9 9-4.04 9-9 9z" /></svg>
+            WhatsApp
+        </a>
+        <a href="https://calendar.app.google/RZeHMy9JhTBH4zxP8">
+            <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM11 3H7v2h4V3zm-2 4H3v2h6V7zm-2 4H1v2h6v-2zm2 4H3v2h6v-2zm10-4h-2v5h2v-5zm4-2h-4v2h4V9zm0-4h-2v2h2V5zm0-2h-2v2h2V3z" /></svg>
+            Book Viewing
+        </a>
+    </div>
+
+</body>
+</html>
