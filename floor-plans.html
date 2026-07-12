@@ -148,9 +148,18 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                opacity: 0.4;
+                opacity: 0.8; /* Brightened from 0.4 */
                 animation: kenburns 20s infinite alternate ease-in-out;
             }
+                    .page-hero video.hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
 
         .page-hero-overlay {
             position: absolute;
@@ -158,7 +167,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(0deg, rgba(11,11,11,0.8) 0%, rgba(11,11,11,0.4) 100%);
+            background: linear-gradient(0deg, rgba(11,11,11,0.4) 0%, rgba(11,11,11,0.1) 100%); /* Lightened overlay */
             z-index: 2;
         }
 
@@ -329,7 +338,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: #f5f5f5;
             text-align: center;
             transition: transform 0.3s;
         }
@@ -345,12 +354,12 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                opacity: 0.4;
+                opacity: 0.5;
                 transition: opacity 0.3s;
             }
 
             .amenity-tile:hover img {
-                opacity: 0.6;
+                opacity: 0.7;
             }
 
         .amenity-content {
@@ -444,7 +453,7 @@
           "@context": "https://schema.org",
           "@type": "ApartmentComplex",
           "name": "Godrej Brooklyn Avenue",
-          "description": "Luxury 3 & 4 BHK Apartments in HITEC City, Hyderabad featuring a 75,000 sq.ft. clubhouse.",
+          "description": "Luxury 3 Bhk standard to 3 Bhk + utility Apartments in HITEC City, Hyderabad featuring a 75,000 sq.ft. clubhouse.",
           "url": "https://www.godrejbrooklynavenue.estate/floor-plans.html",
           "address": {
             "@type": "PostalAddress",
@@ -500,44 +509,50 @@
     <!-- Hero Section -->
     <section class="page-hero" style="padding: 0;">
         <!-- Replace this image with a video tag if you want a video here -->
-        <img src="public/images/Brooklynbridge.webp" alt="Brooklyn Bridge">
+         <!-- Pexels Video Link: Modern Luxury Interior. Replace src with your local folder path later -->
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/public/images/hero-poster.jpg">
+            <!-- Point to the public folder -->
+            <source src="public/videos/hero-video.mp4" type="video/mp4">
+        </video>
+
         <div class="page-hero-overlay"></div>
         <div class="page-hero-content">
             <span class="small-caps" style="color: var(--brass);">The Blueprint</span>
-            <h1>Floor Plans & Specifications</h1>
-            <p>Meticulously Designed for the Discerning Few</p>
+            <h1>Floor Plans & Specs</h1>
+            <p>Meticulously Designed</p>
         </div>
     </section>
 
-    <!-- Floor Plans Grid -->
-    <!-- Floor Plans Grid (1 Live, 3 Coming Soon) -->
+        <!-- Full Width Master Project Layout -->
+    <section style="background: var(--onyx); padding: 60px 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="small-caps">The Overview</span>
+                <h2 style="color: #fff; font-size: 2.5rem;">Master Project Layout</h2>
+                <p style="color: var(--muted); margin-top: 10px;">A bird's-eye view of Godrej Brooklyn Avenue's interconnected towers and green spaces.</p>
+            </div>
+            <!-- Replace src with your actual master plan image -->
+            <img src="public/images/master-plan.webp" alt="Godrej Brooklyn Avenue Master Layout" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain; border: 1px solid #333; background: #fff; padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        </div>
+    </section>
+
+    <!-- Unit Typologies Grid (2 Column Layout) -->
     <section>
         <div class="container">
             <div class="section-header">
                 <span class="small-caps">The Collection</span>
-                <h2>Typologies & Layouts</h2>
+                <h2>Individual Unit Layouts</h2>
+                <p style="color: var(--muted); max-width: 600px; margin: 10px auto 0;">Detailed floor plans for each typology are being finalized by the master architects.</p>
             </div>
+            
             <div class="plans-grid">
-                <!-- Plan 1: MASTER PLAN (LIVE) -->
-                <div class="plan-card">
-                    <!-- Replace src with your actual master plan image -->
-                    <img src="public/images/master-plan.webp" alt="Godrej Brooklyn Avenue Master Floor Plan" style="width: 100%; height: 300px; object-fit: cover; margin-bottom: 25px; border: 1px solid #eee;">
-                    <h3>3 BHK Classic</h3>
-                    <span class="plan-size">1,600 sq.ft. - Master Plan</span>
-                    <ul class="plan-specs">
-                        <li>3 Bedrooms with Attached Baths</li>
-                        <li>Spacious Living & Dining Area</li>
-                        <li>Modular Kitchen with Utility</li>
-                        <li>Master Suite with Walk-in Closet</li>
-                    </ul>
-                    <a href="booking.html" class="btn btn-brass" style="width: 100%;">Request Detailed Brochure</a>
-                </div>
-
-                <!-- Plan 2: COMING SOON -->
-                <div class="plan-card" style="opacity: 0.7; position: relative;">
-                    <div style="width: 100%; height: 300px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border: 1px dashed #ccc; color: var(--muted); flex-direction: column;">
-                        <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: currentColor; margin-bottom: 10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
-                        Coming Soon
+                
+                <!-- Plan 2: 3 BHK Premium (Speculative Build-out) -->
+                     <div class="plan-card">
+                        <div style="width: 100%; height: 300px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; position: relative; overflow: hidden; border: 1px solid #eee;">
+                        <img src="public/images/floor-plan1.webp" alt="Floor plans" style="width: 80%; height: auto; opacity: 0.35; position: absolute; filter: grayscale(100%);">
+                        <div style="position: absolute; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                        <span style="position: relative; z-index: 2; color: var(--onyx); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600; border: 1px solid #ccc; padding: 8px 16px; background: rgba(255,255,255,0.9);">Drawings Pending</span>
                     </div>
                     <h3>3 BHK Premium</h3>
                     <span class="plan-size">1,800 - 1,999 sq.ft.</span>
@@ -547,15 +562,16 @@
                         <li>Private Deck / Balcony with Views</li>
                         <li>Separate Dining & Utility Spaces</li>
                     </ul>
-                    <button class="btn btn-outline-dark" style="width: 100%; cursor: not-allowed;" disabled>Notify Me When Ready</button>
+                    <a href="booking.html" class="btn btn-brass" style="width: 100%;">Request Priority Access</a>
                 </div>
 
-                <!-- Plan 3: COMING SOON -->
-                <div class="plan-card" style="opacity: 0.7; position: relative;">
-                    <div style="width: 100%; height: 300px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border: 1px dashed #ccc; color: var(--muted); flex-direction: column;">
-                        <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: currentColor; margin-bottom: 10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
-                        Coming Soon
-                    </div>
+                <!-- Plan 3: 3 BHK Skyline (Speculative Build-out) -->
+                <div class="plan-card">
+                    <div style="width: 100%; height: 300px; background: #cfcfcf; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; position: relative; overflow: hidden; border: 1px solid #eee;">
+                        <img src="public/images/floor-plan2.webp" alt="Floor plans" style="width: 80%; height: auto; opacity: 0.35; position: absolute; filter: grayscale(100%);">
+                        <div style="position: absolute; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                        <span style="position: relative; z-index: 2; color: var(--onyx); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600; border: 1px solid #ccc; padding: 8px 16px; background: rgba(255,255,255,0.9);">Drawings Pending</span>
+                    </div>              
                     <h3>3 BHK Skyline</h3>
                     <span class="plan-size">2,000 - 2,400 sq.ft.</span>
                     <ul class="plan-specs">
@@ -564,30 +580,31 @@
                         <li>Panoramic 270° City Views</li>
                         <li>Premium Smart Home Integration</li>
                     </ul>
-                    <button class="btn btn-outline-dark" style="width: 100%; cursor: not-allowed;" disabled>Notify Me When Ready</button>
+                    <a href="booking.html" class="btn btn-brass" style="width: 100%;">Request Priority Access</a>
                 </div>
 
-                <!-- Plan 4: COMING SOON -->
-                <div class="plan-card" style="opacity: 0.7; position: relative;">
-                    <div style="width: 100%; height: 300px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; border: 1px dashed #ccc; color: var(--muted); flex-direction: column;">
-                        <svg viewBox="0 0 24 24" style="width: 40px; height: 40px; fill: currentColor; margin-bottom: 10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" /></svg>
-                        Coming Soon
-                    </div>
-                    <h3>4 BHK Penthouse</h3>
-                    <span class="plan-size">3,200 sq.ft.</span>
+                                <!-- Plan 4: 3 BHK + Utility (Speculative Build-out) -->
+                <div class="plan-card">
+                    <div style="width: 100%; height: 300px; background: #cfcfcf; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; position: relative; overflow: hidden; border: 1px solid #eee;">
+                        <img src="public/images/floor-plan1.webp" alt="Floor plans" style="width: 80%; height: auto; opacity: 0.35; position: absolute; filter: grayscale(100%);">
+                        <div style="position: absolute; width: 100%; height: 100%; background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                        <span style="position: relative; z-index: 2; color: var(--onyx); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600; border: 1px solid #ccc; padding: 8px 16px; background: rgba(255,255,255,0.9);">Drawings Pending</span>
+                    </div>    
+                    <h3>3 BHK + Utility</h3>
+                    <span class="plan-size">3,200+ sq.ft.</span>
                     <ul class="plan-specs">
                         <li>Double-Height Ceilings in Living Room</li>
                         <li>4 Bedrooms + Servant's Quarters</li>
-                        <li>Private Terrace Garden / Pool Option</li>
-                        <li>Exclusive Penthouse Elevator Access</li>
+                        <li>Private Terrace Garden Option</li>
+                        <li>Exclusive Elevator Access</li>
                     </ul>
-                    <button class="btn btn-outline-dark" style="width: 100%; cursor: not-allowed;" disabled>Notify Me When Ready</button>
+                    <a href="booking.html" class="btn btn-brass" style="width: 100%;">Request Priority Access</a>
                 </div>
-            </div>
-        </div>
-    </section>
+            </div> <!-- END plans-grid -->
+        </div> <!-- END container -->
+    </section> <!-- END Unit Typologies Section -->
 
-    <!-- Specifications Section -->
+    <!-- Specifications Section (FULL SPAN) -->
     <section class="specs-section">
         <div class="container">
             <div class="section-header">
@@ -618,10 +635,6 @@
                 <tr>
                     <th>Smart Home</th>
                     <td>Pre-wired for smart home automation (lights, ACs, curtains), video door phone, and multi-point security surveillance.</td>
-                </tr>
-                <tr>
-                    <th>Electricals</th>
-                    <td>Adequate power with HT metering, AC point power provision only in Bedroom, Living/Dining room, modular switches & sockets (Schneider/Panasonic/Legrand), concealed copper wiring (Polycab/RR) </td>
                 </tr>
             </table>
         </div>
