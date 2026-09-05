@@ -229,6 +229,30 @@
             z-index: 1;
             opacity: 0.8;
         }
+        .hero-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(192, 154, 88, 0.85); /* brass */
+            border: 1px solid rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+
+.hero-play:hover {
+    background: var(--brass);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
 
         .hero-overlay {
             position: absolute;
@@ -266,7 +290,7 @@
             }
 
             .hero-card h1 {
-                clamp: (2.2rem, 5vw, 3.5rem);
+                font-size: clamp(2.2rem, 5vw, 3.5rem);
                 line-height: 1;
                 color: #fff;
                 margin-bottom: 12px;
@@ -530,7 +554,7 @@
         }
 
         .nri-content h2 {
-            clamp(2.2rem, 5vw, 3.5rem);
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
             margin-bottom: 20px;
         }
 
@@ -546,7 +570,7 @@
         }
 
             .final-cta h2 {
-                clamp(2.2rem, 5vw, 3.5rem);
+                font-size: clamp(2.2rem, 5vw, 3.5rem);
                 margin-bottom: 15px;
             }
 
@@ -765,21 +789,7 @@
             margin-top: 25px;
         }
 
-        <section class="location-section">
-
-    <div class="section-title">
-        <span>Prime Address</span>
-        <h2>Location Advantage</h2>
-        <p>
-            Located in KPHB Phase IV, Brooklyn Avenue enjoys excellent
-            connectivity to HITEC City, Metro Rail, schools,
-            hospitals and shopping destinations.
-        </p>
-    </div>
-
-    <div class="location-grid">
-
-        <!-- Google Map -->
+                <!-- Google Map -->
 
         <div class="location-map">
 
@@ -878,4 +888,5 @@
                 .logo {
                     height: 30px; /* slightly smaller on phones */
                 }
+                .hero-video { display: none; }
             }
